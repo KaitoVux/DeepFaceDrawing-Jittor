@@ -10,12 +10,12 @@ source ~/DeepFaceDrawing/bin/activate
 python3.7 -m pip install -U pip
 
 # install necessary libraries
-pip install jittor==1.2.2.09
-pip install pyqt5==5.9.2
-pip install Pillow==8.0.1
-pip install scipy==1.5.4
-pip install dominate==2.6.0
-pip install opencv-python==4.1.0.25
+python3.7 -m pip install jittor==1.2.2.09
+python3.7 -m pip install pyqt5==5.9.2
+python3.7 -m pip install Pillow==8.0.1
+python3.7 -m pip install scipy==1.5.4
+python3.7 -m pip install dominate==2.6.0
+python3.7 -m pip install opencv-python==4.1.0.25
 mv ./heat/bg.jpg ./heat/.jpg
 
 # download pretrained model 
@@ -27,4 +27,4 @@ unzip AE_whole.zip && rm AE_whole.zip
 
 # run code
 cd ..
-python3.7 test_model.py
+# python3.7 test_model.py
