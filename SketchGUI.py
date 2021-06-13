@@ -422,7 +422,7 @@ class Ui_SketchGUI(object):
         self.Undo_Button.setText(_translate("SketchGUI", "Undo"))
         self.BrushNum_label.setText(_translate("SketchGUI", "3"))
         self.EraserNum_label.setText(_translate("SketchGUI", "3"))
-        self.Brush_Button.setText(_translate("SketchGUI", "Brush"))
+        self.Brush_Button.setText(_translate("SketchGUI", "Bàn chải"))
         self.Load_Button.setText(_translate("SketchGUI", "Tải ảnh"))
         self.bar_num.setText(_translate("SketchGUI", "1"))
         self.bar_num_2.setText(_translate("SketchGUI", "3"))
