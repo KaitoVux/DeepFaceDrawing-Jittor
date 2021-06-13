@@ -18,7 +18,9 @@ python3.7 -m pip install dominate==2.6.0
 python3.7 -m pip install opencv-python==4.1.0.25
 mv ./heat/bg.jpg ./heat/.jpg
 
-# download pretrained model 
+# download pretrained model
+rm -rf Params
+mkdir Params
 cd ./Params
 wget -O Combine.zip https://www.dropbox.com/s/5s5c4zuq6jy0cgc/Combine.zip
 unzip Combine.zip && rm Combine.zip
