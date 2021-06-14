@@ -415,8 +415,10 @@ class Ui_SketchGUI(object):
         self.Eraser_Button.hide()
         self.brush_label.hide()
         self.Erase_label.hide()
-        self.EraseSize.hide()
         self.BrushSize.hide()
+        self.EraseSize.hide()
+        self.BrushNum_label.hide()
+        self.EraserNum_label.hide()
         self.bar_num.hide()
         self.bar_num_2.hide()
         self.bar_num_3.hide()
@@ -428,6 +430,13 @@ class Ui_SketchGUI(object):
         self.Part_3.hide()
         self.Part_4.hide()
         self.Part_5.hide()
+        
+        self.part0_Slider.hide()
+        self.part1_Slider.hide()
+        self.part2_Slider.hide()
+        self.part3_Slider.hide()
+        self.part4_Slider.hide()
+        self.part5_Slider.hide()
         
         
     def retranslateUi(self, SketchGUI):
