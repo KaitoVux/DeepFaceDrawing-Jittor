@@ -15,7 +15,7 @@ import _thread as thread
 import os
 import jittor as jt
 
-jt.flags.use_cuda = 1
+jt.flags.use_cuda = 0
 
 class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
 
