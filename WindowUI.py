@@ -94,6 +94,7 @@ class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
         self.Man_Button.clicked.connect(self.choose_Gender)
 
         self.actionSave.triggered.connect(self.saveFile)
+        self.actionQuit.triggered.connect(self.closeApp)
 
     def mode_select(self, mode):
         for i in range(len(self.modes)):
@@ -103,12 +104,12 @@ class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
     def brush_mode(self):
         self.mode_select(1)
         self.brush_change()
-        self.statusBar().showMessage("Brush")
+        self.statusBar().showMessage("Chế độ vẽ")
 
     def eraser_mode(self):
         self.mode_select(0)
         self.eraser_change()
-        self.statusBar().showMessage("Eraser")
+        self.statusBar().showMessage("Chế độ tẩy")
 
     def undo(self):
         self.input_scene.undo()
@@ -155,10 +156,10 @@ class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
         self.output_scene.reset()
         self.start_time = time.time()
         self.input_scene.start_Shadow()
-        self.statusBar().showMessage("Clear Drawing Board")
+        self.statusBar().showMessage("Xóa sạch bảng vẽ")
 
     def convert(self):
-        self.statusBar().showMessage("Press Convert")
+        self.statusBar().showMessage("Tái tạo ảnh")
         self.input_scene.convert_RGB()
         self.output_scene.updatePixmap()
 
@@ -202,9 +203,9 @@ class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
         self.input_scene.shadow_on = not self.input_scene.shadow_on
         self.input_scene.updatePixmap()
         if self.input_scene.shadow_on:
-            self.statusBar().showMessage("Shadow ON")
+            self.statusBar().showMessage("Hiện bóng")
         else:
-            self.statusBar().showMessage("Shadow OFF")
+            self.statusBar().showMessage("Xóa bóng")
 
 
     def choose_Gender(self):
@@ -213,3 +214,8 @@ class WindowUI(QtWidgets.QMainWindow,Ui_SketchGUI):
         else:
             self.input_scene.sex = 0
         self.input_scene.start_Shadow()
+        
+    
+    def closeApp(self):
+        print("Exit Application")
+        self.close()
